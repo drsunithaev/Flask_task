@@ -1,0 +1,173 @@
+[2022-08-20 17:08:32,116: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:08:32,116: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:10:13,705: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:10:13,705: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:11:15,904: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:11:15,905: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:11:42,690: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:11:42,690: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:14:24,542: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:14:24,542: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:14:30,465: INFO: database]: Connect to database
+[2022-08-20 17:14:30,511: ERROR: database]: local variable 'mydb' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 44, in db_connect
+    mydb = con.connect(host = "localhost",
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 20, in insert
+    mydb = db_connect()
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 50, in db_connect
+    mydb.close()
+UnboundLocalError: local variable 'mydb' referenced before assignment
+[2022-08-20 17:14:30,526: ERROR: app]: Exception on /insert [POST]
+Traceback (most recent call last):
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'insert' did not return a valid response. The function either returned None or ended without a return statement.
+[2022-08-20 17:14:30,533: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:14:30] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+[2022-08-20 17:15:07,301: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:15:07,301: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:16:01,703: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:16:01,703: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:16:16,723: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:16:16,723: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:16:40,371: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 17:16:40,371: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-08-20 17:20:48,967: INFO: database]: Connect to database
+[2022-08-20 17:20:48,982: ERROR: database]: local variable 'mydb' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 45, in db_connect
+    mydb = con.connect(host = "localhost",
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 21, in insert
+    mydb = db_connect()
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 51, in db_connect
+    mydb.close()
+UnboundLocalError: local variable 'mydb' referenced before assignment
+[2022-08-20 17:20:48,982: ERROR: app]: Exception on /insert [POST]
+Traceback (most recent call last):
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'insert' did not return a valid response. The function either returned None or ended without a return statement.
+[2022-08-20 17:20:48,992: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:20:48] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+[2022-08-20 17:22:30,017: INFO: database]: Connect to database
+[2022-08-20 17:22:30,029: ERROR: database]: local variable 'mydb' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 45, in db_connect
+    mydb = con.connect(host = "localhost",
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 21, in insert
+    mydb = db_connect()
+  File "C:\Users\sunit\PycharmProjects\Flask_task\database.py", line 51, in db_connect
+    mydb.close()
+UnboundLocalError: local variable 'mydb' referenced before assignment
+[2022-08-20 17:22:30,029: ERROR: app]: Exception on /insert [POST]
+Traceback (most recent call last):
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\sunit\Anaconda3\envs\Flask_task\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'insert' did not return a valid response. The function either returned None or ended without a return statement.
+[2022-08-20 17:22:30,032: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:22:30] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+[2022-08-20 17:24:00,894: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:24:00] "[33mPOST /abc HTTP/1.1[0m" 404 -
+[2022-08-20 17:24:47,791: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:24:47] "[33mPOST /abc HTTP/1.1[0m" 404 -
+[2022-08-20 17:24:52,229: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:24:52] "[33mPOST /abc HTTP/1.1[0m" 404 -
+[2022-08-20 17:45:29,565: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:45:29] "[33mPOST /test HTTP/1.1[0m" 404 -
+[2022-08-20 17:46:08,587: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:46:08] "[33mPOST /test HTTP/1.1[0m" 404 -
+[2022-08-20 17:46:38,852: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:46:38] "[33mPOST /test HTTP/1.1[0m" 404 -
+[2022-08-20 17:48:11,090: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:48:11] "[33mPOST /test HTTP/1.1[0m" 404 -
+[2022-08-20 17:50:52,164: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:50:52] "[33mPOST /test HTTP/1.1[0m" 404 -
+[2022-08-20 17:51:35,190: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:51:35] "[33mPOST /test1 HTTP/1.1[0m" 404 -
+[2022-08-20 17:55:31,785: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 17:55:31] "[33mPOST /test1 HTTP/1.1[0m" 404 -
+[2022-08-20 18:07:58,111: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 18:07:58] "[33mPOST /test1 HTTP/1.1[0m" 404 -
+[2022-08-20 18:08:43,839: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 18:08:43] "[33mPOST /test1 HTTP/1.1[0m" 404 -
+[2022-08-20 18:09:52,395: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 18:09:52] "[33mPOST /test1 HTTP/1.1[0m" 404 -
+[2022-08-20 18:11:22,662: INFO: _internal]: 127.0.0.1 - - [20/Aug/2022 18:11:22] "[33mPOST /abc HTTP/1.1[0m" 404 -
+[2022-08-20 18:24:44,998: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-08-20 18:24:44,998: INFO: _internal]: [33mPress CTRL+C to quit[0m
